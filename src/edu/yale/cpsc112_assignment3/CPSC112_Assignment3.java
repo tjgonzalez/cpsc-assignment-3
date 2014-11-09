@@ -18,6 +18,7 @@ public class CPSC112_Assignment3 {
 
   public static void makeMySecret() {
      // Part 1 code goes here (please leave the next few lines at the end of the makeMySecret method)
+	  //test of a slight change to the git tracker
     if (DEBUG)
     {
        System.out.println(mySecret);
