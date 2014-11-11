@@ -53,28 +53,24 @@ public class CPSC112_Assignment3 {
   public static boolean isGuessValid(String input) {
     // Part 2 code goes here
 	  try{
-		  Integer.parseInt(input);
+		
 		  while (input.length() <= 4)
 		  {
-			  if (input.charAt(0) == 1 || input.charAt(0) == 2 || input.charAt(0) == 3 || input.charAt(0) == 4 || input.charAt(0) == 5 || input.charAt(0) == 6 || input.charAt(0) == 7)
+			  int a = Integer.parseInt(input.substring(0, 1));
+			  int b = Integer.parseInt(input.substring(1, 2));
+			  int c = Integer.parseInt(input.substring(2, 3));
+			  int d = Integer.parseInt(input.substring(input.length(), input.length()-1));
+			  if (a <= 7 && b <=7 && c <=7 && d <=7)
+			  {
+				  if(a != b && a!=c && a!=d && b!=c && b!=d && d!=c)
 				  {
-					  if (input.charAt(1) == 1 || input.charAt(1) == 2 || input.charAt(1) == 3 || input.charAt(1) == 4 || input.charAt(1) == 5 || input.charAt(1) == 6 || input.charAt(1) == 7)
-					  {
-						  if (input.charAt(2) == 1 || input.charAt(2) == 2 || input.charAt(2) == 3 || input.charAt(2) == 4 || input.charAt(2) == 5 || input.charAt(2) == 6 || input.charAt(2) == 7)
-						  {
-							  if (input.charAt(3) == 1 || input.charAt(3) == 2 || input.charAt(3) == 3 || input.charAt(3) == 4 || input.charAt(3) == 5 || input.charAt(3) == 6 || input.charAt(3) == 7)
-							  {
-								String dummy = "abcd";
-								 return true;
-							  }  
-						  }
-					  }
-				  } 	
+					  return true;
+				  }
 			  }
-		  
+		  }
 		  System.out.println("Input must be a 4-digit number with digits between 1 and 7.");
 		  return false;
-		  }
+	  }
 	
 	  catch (Exception e)
 	     {
